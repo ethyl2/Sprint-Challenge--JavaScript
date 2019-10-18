@@ -30,16 +30,36 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. **Describe the biggest difference between `.forEach` & `.map`.**
 
-**.map()** returns a new array, containing the results of executing the callback function body on each of the array’s elements, while **.forEach()** executes whatever is inside the callback function body on each of the array's elements, and doesn’t return anything.
+**`.map()`** returns a new array, containing the results of executing the callback function body on each of the array’s elements, while **`.forEach()`** executes whatever is inside the callback function body on each of the array's elements, and doesn’t return anything.
 
 
 2. **What is the difference between a function and a method?**
 
+**“Function”** is a more general term, while **“method”** is subcategory of “function”. A method is a function that is a property of an object.
+
 3. **What is closure?**
+
+Closure is the combination of a function and the lexical environment in which it was declared; the function has access to a collection of all of the variables in scope at the time it was created.
+
+When JavaScript sees a function inside of another function, it keeps the variables of the outer function in memory and doesn't destroy them once the outer function is executed. Closure gives the inner function access to those variables in the outer scope.
+
+Closure allows an inner function to access variables in an outer scope, but outer functions don’t have access to variables inside inner functions. In order to execute a function, the function will look for a variable it needs in its function body, but if it can’t find it, it will reach out to the scope outside the function to find it, and it will keep going further if necessary to find it. (If it can’t find it at the end of its search, the variable will be undefined.)
 
 4. **Describe the four rules of the 'this' keyword.**
 
+    1. In **global** scope, `this` refers to the window Object, unless in strict mode, then `this` is undefined.
+
+    2. **Implicit binding**: `this` refers to the object to the left of the dot, when a method is called on an object.  myObject.showThis(); ← here, `this` refers to myObject.
+
+    3. **Explicit binding**: `this` is explicitly defined when you use `.bind()`, `.call()`, or `.apply()`. `this` refers to the object passed as an argument. 
+    
+    Example: mySampleFunction.call(myObj); ← here, `this` refers to myObj. mySampleFunction is invoked in the context of myObj. We're explicitly (using call()) specifying what `this` is referencing.
+
+    4. **New binding**: Whenever a constructor function is used, `this` refers to the specific instance object that is created and returned by the constructor function. 
+
 5. **Why do we need super() in an extended class?**
+
+`super()` lets the child class access and use the attributes and methods of the parent class.
 
 ## Project Set up
 
