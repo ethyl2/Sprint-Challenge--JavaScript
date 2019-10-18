@@ -23,7 +23,7 @@ function CuboidMaker(attrs) {
 */
 
 CuboidMaker.prototype.volume = function() {
-  const calculation = this.length * this.length * this.height;
+  const calculation = this.length * this.width * this.height;
   console.log(`Volume of cuboid of ${this.width} x ${this.length} x ${this.height} = ${calculation}`);
   return calculation;
 }
