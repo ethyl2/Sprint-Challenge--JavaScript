@@ -28,15 +28,18 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
-1. Describe the biggest difference between `.forEach` & `.map`.
+1. **Describe the biggest difference between `.forEach` & `.map`.**
 
-2. What is the difference between a function and a method?
+**.map()** returns a new array, containing the results of executing the callback function body on each of the array’s elements, while **.forEach()** executes whatever is inside the callback function body on each of the array's elements, and doesn’t return anything.
 
-3. What is closure?
 
-4. Describe the four rules of the 'this' keyword.
+2. **What is the difference between a function and a method?**
 
-5. Why do we need super() in an extended class?
+3. **What is closure?**
+
+4. **Describe the four rules of the 'this' keyword.**
+
+5. **Why do we need super() in an extended class?**
 
 ## Project Set up
 
